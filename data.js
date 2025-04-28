@@ -26,7 +26,7 @@ const dataKegiatan = [
   { nama: "Aldiko Araya", status: "Alpa" },
   { nama: "Alfaro Azmi Triamantyo", status: "Alpa" },
   { nama: "Almas Tito Rifa'i", status: "Alpa" },
-  { nama: "Ananda Febriyanti", status: "Alpa" },
+  { nama: "Ananda Febriyanti", status: "Hadir" },
   { nama: "Asyazid Prasetyo Alfandhi", status: "Alpa" },
   { nama: "Danureza Setiabudi", status: "Hadir" },
   { nama: "Dimitri Setya", status: "Hadir" },
