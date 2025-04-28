@@ -178,8 +178,8 @@ footer {
 }
 
 /* Chart canvas */
+/* Canvas Responsif */
 canvas {
-  margin-top: 20px;
   width: 100% !important;
   height: auto !important;
 }
@@ -266,5 +266,21 @@ canvas {
   input[type="text"], select {
     font-size: 14px;
     padding: 10px 1px;
+  }
+  
+      .chartjs-x-axis text {
+    font-size: 12px; /* Ukuran font label lebih kecil */
+    white-space: nowrap; /* Jangan pecah kata */
+    transform: rotate(-45deg); /* Rotasi label agar tidak tumpuk */
+    transform-origin: center; /* Rotasi di pusat */
+  }
+
+  .chartjs-x-axis {
+    margin-top: 15px; /* Tambahkan margin untuk memberi ruang */
+  }
+
+  canvas {
+    max-width: 100% !important;
+    height: auto !important;
   }
 }
