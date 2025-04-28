@@ -7,7 +7,7 @@ const dataKegiatan = [
   { nama: "Hery Haryadi", status: "Hadir" },
   { nama: "Arjuna Pamungkas", status: "Hadir" },
   { nama: "Mohammad Walid Ridho", status: "Hadir" },
-  { nama: "Ridho Ariotama", status: "Alpa" },
+  { nama: "Ridho Ariotama", status: "Izin" },
   { nama: "Rasyiqha Syafa Rabanny", status: "Hadir" },
   { nama: "Salman Alparisi", status: "Hadir" },
   { nama: "Muhammad Rizky Hidayat", status: "Hadir" },
