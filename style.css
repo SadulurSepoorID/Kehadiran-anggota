@@ -1,0 +1,270 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background: #007bff;
+  color: white;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.back-btn {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: 2px solid #007bff;
+  color: #007bff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: #007bff;
+  color: white;
+}
+
+header h1 {
+  font-size: 22px;
+  margin: 0;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+nav button {
+  background: #ffffff;
+  color: #007bff;
+  border: 2px solid #007bff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav button:hover {
+  background: #7b7b7b;
+  color: white;
+}
+
+  .search-btn {
+  background-color: #007bff;  /* Biru */
+  color: white;               /* Font putih */
+  border: 2px solid #007bff;  /* Border biru */
+  padding: 12px 20px;         /* Padding tombol */
+  font-size: 16px;            /* Ukuran font */
+  font-weight: bold;          /* Font bold */
+  border-radius: 8px;         /* Sudut melengkung */
+  cursor: pointer;           /* Pointer saat hover */
+  transition: background 0.3s, color 0.3s;  /* Transisi smooth */
+}
+
+.search-btn:hover {
+  background-color: #0056b3; /* Biru lebih gelap saat hover */
+  color: white;              /* Tetap font putih saat hover */
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 70px;
+}
+
+h2, h3 {
+  color: #007bff;
+  margin-bottom: 15px;
+}
+h1{
+  color: #ffff;
+  margin-bottom: 15px;
+}
+
+input[type="text"], select {
+  width: 100%;
+  padding: 12px 1px;
+  margin: 10px 0 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* Card layout */
+.card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10;
+}
+
+/* Badge */
+.badge {
+  background: #007bff;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  color: #007bff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+/* Chart canvas */
+canvas {
+  margin-top: 20px;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.top3-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1px;
+}
+
+.top3-table th, .top3-table td {
+  border: 1px solid #ddd;
+  padding: 7px 10px;
+  text-align: center;
+}
+
+.top3-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.top3-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.top3-table tr:hover {
+  background-color: #e6f0ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 15px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  header h1 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .back-btn {
+    position: relative;
+    transform: none;
+    left: 0;
+    top: 0;
+    padding: 6px 12px;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  nav button {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  main {
+    padding: 15px;
+    padding-bottom: 70px;
+  }
+
+  ul li {
+    padding: 1px 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 2px;  /* Tambahkan jarak bawah agar tidak mepet footer */
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  input[type="text"], select {
+    font-size: 14px;
+    padding: 10px 1px;
+  }
+}
