@@ -2,7 +2,7 @@ const dataKegiatan = [
   {
     tanggal: "2025-03-16",
     namaKegiatan: "Sosialisasi Anti Pelecehan Seksual",
-    lokasi: "Staiun Pasar Senen",
+    lokasi: "Stasiun Pasar Senen",
     absensi: [
   { nama: "Hery Haryadi", status: "Hadir" },
   { nama: "Arjuna Pamungkas", status: "Hadir" },
@@ -156,7 +156,7 @@ const dataKegiatan = [
   {
     tanggal: "2025-04-27",
     namaKegiatan: "Sosialisasi Anti Pelecehan Seksual",
-    lokasi: "Staiun Jakarta Kota",
+    lokasi: "Stasiun Jakarta Kota",
     absensi: [
   { nama: "Hery Haryadi", status: "Izin" },
   { nama: "Arjuna Pamungkas", status: "Izin", alasan: "Kerja" },
