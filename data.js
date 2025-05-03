@@ -251,7 +251,7 @@ const dataKegiatan = [
   absensi: [
     { nama: "Hery Haryadi", status: "Izin" },
     { nama: "Arjuna Pamungkas", status: "Izin" },
-    { nama: "Mohammad Walid Ridho", status: "Izin" },
+    { nama: "Mohammad Walid Ridho", status: "Hadir" },
     { nama: "Ridho Ariotama", status: "Izin" },
     { nama: "Rasyiqha Syafa Rabanny", status: "Hadir" },
     { nama: "Salman Alparisi", status: "Izin" },
@@ -259,7 +259,7 @@ const dataKegiatan = [
     { nama: "Fathir Ahmad Maulana", status: "Hadir" },
     { nama: "Eki Apriandi", status: "Izin" },
     { nama: "Moch Fikri", status: "Hadir" },
-    { nama: "Agil Pramono", status: "Izin" },
+    { nama: "Agil Pramono", status: "Hadir" },
     { nama: "Aldi Hadiansyah", status: "Izin" },
     { nama: "Hasan Al Anwari", status: "Izin" },
     { nama: "Muhammad Alfazely Wibisono", status: "Izin" },
