@@ -92,7 +92,7 @@ const dataKegiatan = [
     { nama: "Aldiko Araya", status: "Alpa" },
     { nama: "Alfaro Azmi Triamantyo", status: "Alpa" },
     { nama: "Almas Tito Rifa'i", status: "Hadir" },
-    { nama: "Alvi Anugerah", status: "Alpa" },
+    { nama: "Alvi Anugerah", status: "Izin" },
     { nama: "Alvito Bima Nurfaqih", status: "Hadir" },
     { nama: "Ananda Febriyanti", status: "Hadir" },
     { nama: "Andhika Firzatullah", status: "Hadir" },
