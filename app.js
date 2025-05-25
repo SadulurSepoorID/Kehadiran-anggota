@@ -118,7 +118,7 @@ function capitalizeWords(str) {
   return str.replace(/\b\w/g, l => l.toUpperCase());
 }
 
-// Fungsi untuk menampilkan tabel nominasi 3 anggota terbaik
+// Fungsi untuk menampilkan tabel nominasi 10 besar dengan tampilan spesial untuk 3 besar
 function showTop3() {
   const content = document.getElementById('content');
 
@@ -156,29 +156,76 @@ function showTop3() {
     delete counter[nama];
   });
 
-  // Ambil 3 anggota terbaik berdasarkan jumlah kehadiran terbanyak
-  const top3 = Object.entries(counter)
+  // Ambil 10 anggota terbaik berdasarkan jumlah kehadiran terbanyak
+  const top10 = Object.entries(counter)
     .sort((a, b) => b[1] - a[1])
-    .slice(0, 3);
+    .slice(0, 10);
 
-  // Tampilkan data dalam bentuk tabel
+  // Pisahkan top 3 dan sisanya
+  const top3 = top10.slice(0, 3);
+  const remaining7 = top10.slice(3);
+
+  // Fungsi untuk mendapatkan emoji medali
+  function getMedalEmoji(rank) {
+    switch(rank) {
+      case 1: return '🥇';
+      case 2: return '🥈';
+      case 3: return '🥉';
+      default: return '';
+    }
+  }
+
+  // Tampilkan data dengan tampilan khusus untuk top 3
   let html = `
-    <h2>Nominasi 3 Anggota Terbaik</h2>
-    <table class="top3-table">
-      <thead>
-        <tr>
-          <th>Ranking</th>
-          <th>Nama</th>
-          <th>Kehadiran</th>
-        </tr>
-      </thead>
-      <tbody>
+    <h2>🏆 Nominasi 10 Besar Anggota Terbaik</h2>
+    
+    <!-- Top 3 dengan tampilan spesial -->
+    <div class="top3-special">
+      <h3>🌟 Top 3 Anggota Terbaik 🌟</h3>
+      <div class="podium-container">
   `;
 
+  // Tampilkan top 3 dalam format card khusus
   top3.forEach(([nama, jumlah], index) => {
+    const rank = index + 1;
+    const medalEmoji = getMedalEmoji(rank);
+    html += `
+      <div class="podium-card rank-${rank}">
+        <div class="medal">${medalEmoji}</div>
+        <div class="rank-number">#${rank}</div>
+        <div class="member-name">${nama}</div>
+        <div class="attendance-count">${jumlah} Kehadiran</div>
+        <div class="achievement-badge">
+          ${rank === 1 ? 'JUARA 1' : rank === 2 ? 'JUARA 2' : 'JUARA 3'}
+        </div>
+      </div>
+    `;
+  });
+
+  html += `
+      </div>
+    </div>
+
+    <!-- Sisa 7 besar dalam tabel biasa -->
+    <div class="remaining-nominees">
+      <h3>📋 Peringkat 4-10</h3>
+      <table class="top10-table">
+        <thead>
+          <tr>
+            <th>Peringkat</th>
+            <th>Nama Anggota</th>
+            <th>Jumlah Kehadiran</th>
+          </tr>
+        </thead>
+        <tbody>
+  `;
+
+  // Tampilkan sisanya dalam tabel
+  remaining7.forEach(([nama, jumlah], index) => {
+    const rank = index + 4; // Mulai dari peringkat 4
     html += `
       <tr>
-        <td>${index + 1}</td>
+        <td><strong>#${rank}</strong></td>
         <td>${nama}</td>
         <td>${jumlah}x</td>
       </tr>
@@ -186,8 +233,9 @@ function showTop3() {
   });
 
   html += `
-      </tbody>
-    </table>
+        </tbody>
+      </table>
+    </div>
   `;
 
   content.innerHTML = html;
